@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Outfit";
+    font-size: 18px;
+}
+
+.page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(217, 54%, 11%);
+    color: white;
+    height: 100vh;
+}
+
+.card {
+    width: 350px;
+    height: 590px;
+    background-color: hsl(216, 50%, 16%);
+    padding: 22px;
+    border-radius: 13px;
+}
+
+.image {
+    position: relative;
+    height: 306px;
+}
+
+.image > .imgeq {
+    max-width: 100%;
+    border-radius: 8px;
+    z-index: 1;
+}
+
+.image > .eye {
+    z-index: 3;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    opacity: 0;
+    transition: 0.5s ease-in-out;
+}
+
+.faded {
+    position: absolute;
+    top: 0%;
+    z-index: 2;
+    background-color: hsl(178, 100%, 50%);
+    height: 306px;
+    width: 306px;
+    border-radius: 8px;
+    opacity: 0;
+    transition: 0.5s ease-in-out;
+}
+
+.image:hover .eye{
+    opacity: 1;
+}
+
+.image:hover .faded {
+    opacity: 0.5;
+}
+
+.pt-20 {
+    padding-top: 20px;
+}
+
+.description {
+    font-weight: 300;
+    color: hsl(215, 51%, 70%);
+}
+
+.pr-dl {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    font-size: 16px;
+    padding-bottom: 20px;
+}
+
+.price {
+    color: hsl(178, 100%, 50%);
+    font-weight: 400;
+}
+
+.dayleft {
+    text-align: right;
+    color: hsl(215, 51%, 70%);
+    font-weight: 300;
+}
+
+.price >img, .dayleft >img {
+    padding-right: 7px;
+    transform: translateY(3px);
+}
+
+.creation {
+    border-top: solid 1px hsl(215, 51%, 70%);
+    font-size: 16px;
+    color: hsl(215, 51%, 70%);
+    padding-top: 20px;
+}
+
+.creation > p {
+    display: inline-block;
+    padding-left: 10px;
+    transform: translateY(-10px);
+}
+
+.creation > p > a {
+    color: white;
+}
+
+.creation >p >a:hover, .name:hover {
+    color: hsl(178, 100%, 50%);
+}
+
+.creation > img {
+    max-width: 35px;
+}
+
+.attribution {
+    position: absolute;
+    bottom: 12px;
+    left: 50%;
+    transform: translateX(-50%) ;
+    color: hsl(215, 51%, 70%);
+}
+
+::selection {
+    background-color: hsl(178, 100%, 30%);
+    color: white;
+}
